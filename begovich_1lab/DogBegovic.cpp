@@ -34,12 +34,13 @@ DogBegovic DogBegovic::readProperties(std::ifstream &file)
 	}
 void DogBegovic::writeProperties(std::ostream &file, DogBegovic dog)
 	{
-		file << dog.age << std::endl;
-		file << dog.nickname << std::endl;
-		file << dog.breed << std::endl;
-		file << dog.owner << std::endl;
+		file << dog.age << "\n";
+		file << dog.nickname << "\n";
+		file << dog.breed << "\n";
+		file << dog.owner << "\n";
 	}
 
 DogBegovic::~DogBegovic()
 {
 }
+
