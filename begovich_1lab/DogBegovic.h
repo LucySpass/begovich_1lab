@@ -1,21 +1,21 @@
 #pragma once
 #include "libraries.h"
 class DogBegovic
-{
+{public:
+	int _age;
+	std::string _nickname, _breed, _owner;
 public:
-	int age;
-	std::string nickname, breed, owner;
 	DogBegovic();
 	~DogBegovic();
 	void getProperties();
 	void seeProperties();
-	DogBegovic readProperties(std::ifstream &file);
-	void writeProperties(std::ostream &file, DogBegovic dog);
+	void readProperties(std::ifstream &file);
+	void writeProperties(std::ostream &file);
 
 	//переопределение оператора сравнения для сокращения кода
 	friend bool operator==(const DogBegovic& left, const DogBegovic& right)
 	{
-		return left.age == right.age && left.breed == right.breed
-			&& left.nickname == right.nickname && left.owner == right.owner;
+		return left._age == right._age && left._breed == right._breed
+			&& left._nickname == right._nickname && left._owner == right._owner;
 	};
 };

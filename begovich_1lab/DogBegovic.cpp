@@ -10,34 +10,34 @@ DogBegovic::DogBegovic()
 void DogBegovic::getProperties()
 	{
 		std::cout << "Age: ";
-		std::cin >> age;
+		std::cin >> _age;
 		std::cout << "Dog's nick: ";
-		std::cin >> nickname;
+		std::cin >> _nickname;
 		std::cout << "Dog's breed: ";
-		std::cin >> breed;
+		std::cin >> _breed;
 		std::cout << "Owner's name: ";
-		std::cin >> owner;
+		std::cin >> _owner;
 	}
 void DogBegovic::seeProperties()
 	{
-		std::cout << "Age: " << age << " Nick: " << nickname << " Breed: " << breed << " Owner: " << owner << std::endl;
-
+		std::cout << "Age: " << _age << std::endl;
+		std::cout << "Nick: " << _nickname << std::endl;
+		std::cout << "Breed: " << _breed << std::endl;
+		std::cout << "Owner: " << _owner << std::endl;
 	}
-DogBegovic DogBegovic::readProperties(std::ifstream &file)
+void DogBegovic::readProperties(std::ifstream &file)
 	{
-		DogBegovic dogFromFile;
-		file >> dogFromFile.age;
-		file >> dogFromFile.nickname;
-		file >> dogFromFile.breed;
-		file >> dogFromFile.owner;
-		return dogFromFile;
+		file >> _age;
+		file >> _nickname;
+		file >> _breed;
+		file >> _owner;
 	}
-void DogBegovic::writeProperties(std::ostream &file, DogBegovic dog)
+void DogBegovic::writeProperties(std::ostream &file)
 	{
-		file << dog.age << "\n";
-		file << dog.nickname << "\n";
-		file << dog.breed << "\n";
-		file << dog.owner << "\n";
+		file << _age << "\n";
+		file << _nickname << "\n";
+		file << _breed << "\n";
+		file << _owner << "\n";
 	}
 
 DogBegovic::~DogBegovic()

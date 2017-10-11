@@ -1,0 +1,4 @@
+﻿  ExhibitionBegovic.cpp
+c:\users\ivana\source\repos\begovich_1lab\begovich_1lab\exhibitionbegovic.cpp(19): warning C4018: '<': signed/unsigned mismatch
+  begovich_1lab.vcxproj -> C:\Users\Ivana\Source\Repos\begovich_1lab\Debug\begovich_1lab.exe
+  begovich_1lab.vcxproj -> C:\Users\Ivana\Source\Repos\begovich_1lab\Debug\begovich_1lab.pdb (Partial PDB)
