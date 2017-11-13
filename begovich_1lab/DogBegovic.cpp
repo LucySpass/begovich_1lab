@@ -2,21 +2,24 @@
 #include "DogBegovic.h"
 #include "libraries.h"
 
-
 DogBegovic::DogBegovic()
 {
 }
 
 void DogBegovic::getProperties()
 	{
+		std::string temp;
 		std::cout << "Age: ";
 		std::cin >> _age;
 		std::cout << "Dog's nick: ";
-		std::cin >> _nickname;
+		std::cin >> temp;
+		_nickname = temp.c_str();
 		std::cout << "Dog's breed: ";
-		std::cin >> _breed;
+		std::cin >> temp;
+		_breed = temp.c_str();
 		std::cout << "Owner's name: ";
-		std::cin >> _owner;
+		std::cin >> temp;
+		_owner = temp.c_str();
 	}
 void DogBegovic::seeProperties()
 	{
@@ -27,10 +30,14 @@ void DogBegovic::seeProperties()
 	}
 void DogBegovic::readProperties(std::ifstream &file)
 	{
+		std::string temp;
 		file >> _age;
-		file >> _nickname;
-		file >> _breed;
-		file >> _owner;
+		file >> temp;
+		_nickname = temp.c_str();
+		file >> temp;
+		_breed = temp.c_str();
+		file >> temp;
+		_owner = temp.c_str();
 	}
 void DogBegovic::writeProperties(std::ostream &file)
 	{

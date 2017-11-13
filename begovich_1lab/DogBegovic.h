@@ -1,9 +1,12 @@
 #pragma once
 #include "libraries.h"
-class DogBegovic
-{public:
+
+
+class DogBegovic: public CObject
+{
+	DECLARE_SERIAL(DogBegovic);
 	int _age;
-	std::string _nickname, _breed, _owner;
+	CString _nickname, _breed, _owner;
 public:
 	DogBegovic();
 	~DogBegovic();

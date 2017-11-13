@@ -15,8 +15,9 @@ void printoutMenu()
 {
 	std::cout << "Avaliable commands: " << std::endl;
 	std::cout << "-help - see menu" << std::endl;
-	std::cout << "-add - add element to container" << std::endl;
-	std::cout << "-csc - consoleSeeContainer - write container in console" << std::endl;
+	std::cout << "-add - add dog to container" << std::endl;
+	std::cout << "-addLab - add labrador to container" << std::endl;
+	std::cout << "-csc - ConsoleSeeContainer - write container in console" << std::endl;
 	std::cout << "-frc - FileReadConainer - read container from file" << std::endl;
 	std::cout << "-fwc - FileWriteContainer - write container to file" << std::endl;
 	std::cout << "-del - container deletion" << std::endl;
@@ -28,6 +29,9 @@ void checkForInput(std::string input, ExhibitionBegovic* container)
 	if (input == "-add")
 	{
 		container->elementAddition();
+	}
+	else if (input == "-addLab") {
+		
 	}
 	else if(input == "-csc")
 	{

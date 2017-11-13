@@ -1,17 +1,25 @@
 #include "stdafx.h"
 #include "ExhibitionBegovic.h"
 #include "libraries.h"
-
+#include "DogBegovic.h"
+#include "LabradorBegovic.h"
 
 ExhibitionBegovic::ExhibitionBegovic()
 {
+	std::shared_ptr <LabradorBegovic> lab = std::make_shared<LabradorBegovic>();
+
+	m_container.push_back(lab);
 }
 
 void ExhibitionBegovic::elementAddition()
 {
-	DogBegovic* dog = new DogBegovic;
+	std::shared_ptr <DogBegovic> dog = std::make_shared<DogBegovic>();
 	dog->getProperties();
 	m_container.push_back(dog);
+}
+
+void ExhibitionBegovic::labradorAddition() {
+
 }
 
 void ExhibitionBegovic::seeContainer()
