@@ -1,3 +1,2 @@
-﻿  begovich1lab.cpp
-  begovich_1lab.vcxproj -> C:\Users\Ivana\Source\Repos\begovich_1lab\x64\Debug\begovich_1lab.exe
-  begovich_1lab.vcxproj -> C:\Users\Ivana\Source\Repos\begovich_1lab\x64\Debug\begovich_1lab.pdb (Partial PDB)
+﻿  stdafx.cpp
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\atlmfc\include\afx.h(24): fatal error C1189: #error:  Building MFC application with /MD[d] (CRT dll version) requires MFC shared dll version. Please #define _AFXDLL or do not use /MD[d]

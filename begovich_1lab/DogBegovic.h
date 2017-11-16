@@ -5,15 +5,16 @@
 class DogBegovic: public CObject
 {
 	DECLARE_SERIAL(DogBegovic);
+
+public:
 	int _age;
 	CString _nickname, _breed, _owner;
-public:
+
 	DogBegovic();
 	~DogBegovic();
 	void getProperties();
 	void seeProperties();
-	void readProperties(std::ifstream &file);
-	void writeProperties(std::ostream &file);
+	void Serialize(CArchive& archive);
 
 	//переопределение оператора сравнения для сокращения кода
 	friend bool operator==(const DogBegovic& left, const DogBegovic& right)

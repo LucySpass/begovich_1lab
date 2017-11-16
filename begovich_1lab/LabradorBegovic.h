@@ -1,10 +1,9 @@
 #pragma once
 #include "DogBegovic.h"
 
-
 class LabradorBegovic: public DogBegovic
 {
-	DECLARE_SERIAL(LabradorBegovic)
+	DECLARE_SERIAL(LabradorBegovic);
 	int _mass;
 	CString _color;
 public:
@@ -12,6 +11,6 @@ public:
 	~LabradorBegovic();
 	void getProperties();
 	void seeProperties();
-	void Serialize(CArchive&);
+	void Serialize(CArchive& archive);
 };
 
